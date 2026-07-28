@@ -111,4 +111,10 @@ Copy `.env.example` to `.env` if needed. No keys are required for the current pi
 
 ## Screenshots
 
-_Add dashboard screenshots here._
+**Dashboard — Bangalore**
+
+![PulseFlow dashboard showing temperature and humidity trends for Bangalore](screenshots/dashboard-bangalore.jpg)
+
+**Dashboard — Tokyo**
+
+![PulseFlow dashboard showing temperature and humidity trends for Tokyo](screenshots/dashboard-tokyo.jpg)
