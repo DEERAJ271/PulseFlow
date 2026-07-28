@@ -56,7 +56,7 @@ GitHub Actions is the live, hosted path (solid lines). The Airflow DAG (dashed l
 
 ## Live Demo
 
-🔗 **Streamlit dashboard:** _[add Streamlit Community Cloud URL here]_
+🔗 **Streamlit dashboard:** [pulseflow-weather.streamlit.app](https://pulseflow-weather.streamlit.app/)
 
 ## Setup
 
