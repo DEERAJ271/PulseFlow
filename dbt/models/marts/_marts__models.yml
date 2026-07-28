@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: daily_city_weather
+    description: Daily aggregated weather stats and temperature anomaly flags per city.
+    columns:
+      - name: city
+      - name: reading_date
+      - name: avg_temp_c
+        description: Mean temperature for the city on this date.
+        tests:
+          - not_null
+      - name: has_temp_anomaly
+        description: True if any consecutive readings that day swung more than 5°C.

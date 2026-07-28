@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: Cleaned and typed weather readings (current + hourly forecast) per city.
+    columns:
+      - name: city
+        description: City name, lowercase with underscores.
+        tests:
+          - not_null
+      - name: reading_ts
+        description: Timestamp of the reading, cast to a proper timestamp type.
+      - name: temp_c
+        description: Air temperature in degrees Celsius.
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: -60
+                max_value: 60
+                inclusive: true

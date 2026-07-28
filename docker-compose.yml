@@ -1,0 +1,25 @@
+# Runs the PulseFlow Airflow DAG locally using `airflow standalone`
+# (single-container scheduler + webserver + metadata db, SQLite-backed).
+# On first boot, Airflow prints an auto-generated admin password to the
+# container logs (also saved to standalone_admin_password.txt in the
+# airflow_home volume) — use `docker compose logs airflow` to find it.
+# UI: http://localhost:8080
+
+services:
+  airflow:
+    image: apache/airflow:3.1.7-python3.11
+    command: standalone
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+      _PIP_ADDITIONAL_REQUIREMENTS: "requests duckdb"
+    ports:
+      - "8080:8080"
+    volumes:
+      - airflow_home:/opt/airflow
+      - ./airflow/dags:/opt/airflow/dags
+      - ./extract:/opt/airflow/extract
+      - ./data:/opt/airflow/data
+
+volumes:
+  airflow_home:

@@ -31,6 +31,13 @@ ENV/
 # DuckDB
 *.duckdb
 *.duckdb.wal
+!data/weather.duckdb
 
 # Environment variables
 .env
+
+# dbt
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+dbt/.user.yml

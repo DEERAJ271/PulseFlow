@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: weather
+    schema: main
+    tables:
+      - name: weather_raw
+        description: Raw flattened weather readings (current + hourly forecast) loaded from Open-Meteo API responses.
