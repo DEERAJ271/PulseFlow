@@ -109,6 +109,10 @@ Airflow UI at [http://localhost:8080](http://localhost:8080) — the admin passw
 
 Copy `.env.example` to `.env` if needed. No keys are required for the current pipeline; it's a placeholder for future config.
 
+## Security
+
+PulseFlow is a **zero-credential project by design**: Open-Meteo is a free, key-less API, and DuckDB is an embedded, file-based database with no server or connection credentials. No API keys, tokens, or secrets are needed to run any part of this pipeline, and none are stored in this repository — `.env.example` is intentionally empty, kept only as a placeholder for future config.
+
 ## Screenshots
 
 **Dashboard — Bangalore**
@@ -118,3 +122,7 @@ Copy `.env.example` to `.env` if needed. No keys are required for the current pi
 **Dashboard — Tokyo**
 
 ![PulseFlow dashboard showing temperature and humidity trends for Tokyo](screenshots/dashboard-tokyo.jpg)
+
+## License
+
+[MIT](LICENSE)
