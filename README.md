@@ -1,5 +1,8 @@
 # PulseFlow
 
+[![License: MIT](https://img.shields.io/github/license/DEERAJ271/PulseFlow)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/DEERAJ271/PulseFlow)](https://github.com/DEERAJ271/PulseFlow/releases/latest)
+
 An automated weather ETL pipeline. Every 30 minutes it pulls current conditions and a 24-hour hourly forecast for 10 cities from the Open-Meteo API, validates and flattens the data, loads it into DuckDB, models it with dbt, and serves it through a Streamlit dashboard.
 
 ## Overview
